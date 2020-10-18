@@ -1,0 +1,85 @@
+const Discord = require('discord.js');
+module.exports.run = async (client, message, args) => {
+const helpEmbed = new Discord.MessageEmbed()
+    .setColor('#D7BDE2')
+    .setTitle('Vibez | Help')
+    .setAuthor(message.author.tag, message.author.displayAvatarURL())
+    .setDescription('__**Current command list**__')
+    .setThumbnail(
+        ''
+    )
+    .addFields(
+      {name:  'Information',  value: 'Information Commands'},
+      {
+        name: 'help',
+        value: 'Shows this message.',
+        inline: false
+      },
+      {
+        name: 'ping',
+        value: 'Gets `Vibez` ping!',
+        inline: false
+      },
+      {
+        name: 'settings',
+        value: 'The settings page!',
+        inline: false
+      },
+      {
+        name: 'invite',
+        value: 'Sends you the bot invite!',
+        inline: false
+      },
+      {
+        name: 'cookie',
+        value: 'Sets the bots cookie!',
+        inline: false
+      },
+      {name:  'Roblox Ranking',  value:  'Roblox Ranking Commands!'},
+      {
+        name: 'demote',
+        value: 'Demote a user!',
+        inline: false
+      },
+      {
+        name: 'fire',
+        value: 'Fire a user. Sets there rank to to the rank that has ID 1',
+        inline: false
+      },
+      {
+        name: 'promote',
+        value: 'Promote a user.',
+        inline: false
+      },
+      {
+        name: 'setrankid',
+        value: 'Set a users rank to the ID provided!',
+        inline: false
+      },
+      {name: 'Roblox Verification', value: 'The commands for verification'},
+      {
+        name: 'getroles',
+        value: 'Claim your group roles.',
+        inline: false
+      },
+      {
+        name: 'updateroles',
+        value: 'Update a users roles.',
+        inline: false
+      },
+      {
+        name: 'verify',
+        value: 'Link your roblox account to our database!',
+        inline: false
+      }
+    
+        
+        
+    )
+    .setTimestamp()
+    .setFooter(
+        'Vibez',
+          ''
+)
+message.channel.send(helpEmbed);
+}
